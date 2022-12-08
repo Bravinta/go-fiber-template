@@ -11,6 +11,7 @@ func main() {
 	err := env.Load()
 	if err != nil {
 		logs.Send(vars.TypeLogs.Error, "Could not load .env file")
+		return
 	}
 
 	internal.Run()
